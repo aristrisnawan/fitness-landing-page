@@ -1,4 +1,5 @@
 import React from "react";
+import Excercise from "../image/exercise.png";
 
 export default function ExcerciseComponent() {
   return (
@@ -18,6 +19,9 @@ export default function ExcerciseComponent() {
             <p className="font-extrabold text-9xl tracking-wider">Cardio</p>
             <p className="font-extrabold text-9xl tracking-wider">Exercise</p>
           </div>
+          <div className=" mr-60">
+            <img src={Excercise} alt="" className=" h-full absolute pb-56" />
+          </div>
           <div className="py-5">
             <div className="  bg-gray-600 opacity-75 px-6 py-3 rounded-md">
               <p className="text-yellow-400 font-extrabold text-4xl">38:14</p>
@@ -30,7 +34,7 @@ export default function ExcerciseComponent() {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-row">
           <div>
             <p className="w-96 mt-5 text-sm text-slate-200 opacity-50">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
