@@ -1,9 +1,10 @@
 import React from "react";
 import Excercise from "../image/exercise.png";
+import { VscArrowRight } from "react-icons/vsc";
 
 export default function ExcerciseComponent() {
   return (
-    <div>
+    <div className="pb-5">
       <div className="  text-white px-20">
         <div className="flex flex-row bg-gray-500 p-2 w-128 opacity-50 rounded-full mt-20 justify-between">
           <button className="bg-green-600 rounded-full text-white py-1 px-4 cursor-pointer">
@@ -56,6 +57,7 @@ export default function ExcerciseComponent() {
         </div>
       </div>
       <WorkoutProgram />
+      <ListExercise />
     </div>
   );
 }
@@ -174,6 +176,41 @@ export function WorkoutProgram() {
           <button className="px-4 py-2 rounded-md bg-green-500 text-white">
             Get Started
           </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function ListExercise() {
+  return (
+    <div className="px-20 text-white">
+      <div className="flex flex-row justify-between py-5 border-b-4 border-slate-600 opacity-50">
+        <div className=" my-auto">
+          <span>01</span>
+        </div>
+        <div>
+          <p className="text-3xl font-bold">Workout at Home</p>
+          <p className="text-sm">15 videos</p>
+        </div>
+        <div className=" my-auto">
+          <span>
+            <VscArrowRight className=" w-6 h-5" />
+          </span>
+        </div>
+      </div>
+      <div className="flex flex-row justify-between py-5 border-b-4 border-slate-600 opacity-50">
+        <div className=" my-auto">
+          <span>02</span>
+        </div>
+        <div>
+          <p className="text-3xl font-bold">Workout at Home</p>
+          <p className="text-sm">15 videos</p>
+        </div>
+        <div className=" my-auto">
+          <span>
+            <VscArrowRight className=" w-6 h-5" />
+          </span>
         </div>
       </div>
     </div>
