@@ -55,6 +55,7 @@ export default function ExcerciseComponent() {
           <PopularExcercise />
         </div>
       </div>
+      <WorkoutProgram />
     </div>
   );
 }
@@ -146,6 +147,33 @@ export function PopularExcercise() {
               58:24
             </span>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function WorkoutProgram() {
+  return (
+    <div className="flex flex-row justify-between pb-7 mt-16">
+      <div className="pl-20 space-x-2 text-white text-8xl font-extrabold">
+        <p>Workout</p>
+        <p>Program</p>
+        <p>Made</p>
+        <p>For</p>
+        <p>You</p>
+      </div>
+      <div className=" bg-zinc-700 w-7/12 h-96 flex flex-col justify-center">
+        <div className="mx-auto text-slate-200 opacity-50 ">
+          <p>Lorem ipsum dolor sit amet, consectetur </p>
+          <p> adipiscing elit, sed do eiusmod tempor </p>
+          <p> incididunt ut labore et dolore magna </p>
+          <p>aliqua consectetur adipiscing.</p>
+        </div>
+        <div className="mx-auto mt-6">
+          <button className="px-4 py-2 rounded-md bg-green-500 text-white">
+            Get Started
+          </button>
         </div>
       </div>
     </div>
