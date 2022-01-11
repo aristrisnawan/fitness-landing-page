@@ -4,7 +4,7 @@ import { VscArrowRight } from "react-icons/vsc";
 
 export default function ExcerciseComponent() {
   return (
-    <div className="pb-5">
+    <div>
       <div className="  text-white px-20">
         <div className="flex flex-row bg-gray-500 p-2 w-128 opacity-50 rounded-full mt-20 justify-between">
           <button className="bg-green-600 rounded-full text-white py-1 px-4 cursor-pointer">
@@ -58,6 +58,7 @@ export default function ExcerciseComponent() {
       </div>
       <WorkoutProgram />
       <ListExercise />
+      <FooterComponent />
     </div>
   );
 }
@@ -212,6 +213,28 @@ export function ListExercise() {
             <VscArrowRight className=" w-6 h-5" />
           </span>
         </div>
+      </div>
+    </div>
+  );
+}
+
+export function FooterComponent() {
+  return (
+    <div className="text-white">
+      <div className="flex flex-row justify-center py-9">
+        <p>
+          Created by{" "}
+          <a href="https://github.com/aristrisnawan" className="italic">
+            aristrisnawan&nbsp;
+          </a>{" "}
+        </p>
+        <p>
+          {" "}
+          | Design by{" "}
+          <a href="https://twitter.com/dwinawan_" className="italic">
+            Dwinawan
+          </a>
+        </p>
       </div>
     </div>
   );
