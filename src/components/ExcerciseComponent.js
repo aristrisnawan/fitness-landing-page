@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Excercise from "../image/exercise.png";
 import { VscArrowRight } from "react-icons/vsc";
+import dataJson from "../dataJson/dataPopular.json";
+import dataList from "../dataJson/dataList.json";
 
 export default function ExcerciseComponent() {
   return (
@@ -64,93 +66,37 @@ export default function ExcerciseComponent() {
 }
 
 export function PopularExcercise() {
+  const [data, setData] = useState(dataJson);
+
+  useEffect(() => {});
+
   return (
     <div>
       <div className="flex flex-row justify-between text-white">
         <p className=" text-2xl font-bold">Popular Exercises</p>
         <p className=" text-slate-200 opacity-50 text-xs">SEE MORE EXERCISES</p>
       </div>
-      <div className=" mt-10 pb-6 grid grid-cols-4 justify-items-center">
-        <div className="mb-5">
-          <div className=" w-60 h-40 rounded relative mb-10">
-            <div className="">
-              <img
-                className="rounded"
-                src="https://media.istockphoto.com/photos/young-female-athlete-running-up-stairs-picture-id1301680726?b=1&k=20&m=1301680726&s=170667a&w=0&h=0yEq5GEY-IKKV7N4WDFpN19G--HqGolwKC9hHawCLrY="
-                alt=""
-              />
+      <div className=" mt-10 pb-6 grid grid-cols-4 justify-items-center LaptopL:grid-cols-4 Laptop:grid-cols-3">
+        {data.popular.map((items) => {
+          return (
+            <div className="mb-5" key={items.id}>
+              <div className=" w-60 h-40 rounded relative mb-10">
+                <div className="">
+                  <img className="rounded" src={items.url} alt="" />
+                </div>
+                <div className="absolute -bottom-9 left-0 flex flex-col pl-3">
+                  <span className=" text-2xl font-bold">{items.title}</span>
+                  <span className=" mt-2 text-xs text-slate-200 opacity-60">
+                    250 est calories
+                  </span>
+                </div>
+                <span className=" bg-black rounded-tl-md py1 px-2 absolute bottom-0 right-0">
+                  58:24
+                </span>
+              </div>
             </div>
-            <div className="absolute -bottom-9 left-0 flex flex-col pl-3">
-              <span className=" text-2xl font-bold">Running</span>
-              <span className=" mt-2 text-xs text-slate-200 opacity-60">
-                250 est calories
-              </span>
-            </div>
-            <span className=" bg-black rounded-tl-md py1 px-2 absolute bottom-0 right-0">
-              58:24
-            </span>
-          </div>
-        </div>
-        <div className="mb-5">
-          <div className=" w-60 h-40 rounded relative">
-            <div className="">
-              <img
-                className="rounded"
-                src="https://media.istockphoto.com/photos/young-female-athlete-running-up-stairs-picture-id1301680726?b=1&k=20&m=1301680726&s=170667a&w=0&h=0yEq5GEY-IKKV7N4WDFpN19G--HqGolwKC9hHawCLrY="
-                alt=""
-              />
-            </div>
-            <div className="absolute -bottom-9 left-0 flex flex-col pl-3">
-              <span className=" text-2xl font-bold">Running</span>
-              <span className=" mt-2 text-xs text-slate-200 opacity-60">
-                250 est calories
-              </span>
-            </div>
-            <span className=" bg-black rounded-tl-md py1 px-2 absolute bottom-0 right-0">
-              58:24
-            </span>
-          </div>
-        </div>
-        <div className="mb-5">
-          <div className=" w-60 h-40 rounded relative">
-            <div className="">
-              <img
-                className="rounded"
-                src="https://media.istockphoto.com/photos/young-female-athlete-running-up-stairs-picture-id1301680726?b=1&k=20&m=1301680726&s=170667a&w=0&h=0yEq5GEY-IKKV7N4WDFpN19G--HqGolwKC9hHawCLrY="
-                alt=""
-              />
-            </div>
-            <div className="absolute -bottom-9 left-0 flex flex-col pl-3">
-              <span className=" text-2xl font-bold">Running</span>
-              <span className=" mt-2 text-xs text-slate-200 opacity-60">
-                250 est calories
-              </span>
-            </div>
-            <span className=" bg-black rounded-tl-md py1 px-2 absolute bottom-0 right-0">
-              58:24
-            </span>
-          </div>
-        </div>
-        <div className="mb-5">
-          <div className=" w-60 h-40 rounded relative">
-            <div className="">
-              <img
-                className="rounded"
-                src="https://media.istockphoto.com/photos/young-female-athlete-running-up-stairs-picture-id1301680726?b=1&k=20&m=1301680726&s=170667a&w=0&h=0yEq5GEY-IKKV7N4WDFpN19G--HqGolwKC9hHawCLrY="
-                alt=""
-              />
-            </div>
-            <div className="absolute -bottom-9 left-0 flex flex-col pl-3">
-              <span className=" text-2xl font-bold">Running</span>
-              <span className=" mt-2 text-xs text-slate-200 opacity-60">
-                250 est calories
-              </span>
-            </div>
-            <span className=" bg-black rounded-tl-md py1 px-2 absolute bottom-0 right-0">
-              58:24
-            </span>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -186,36 +132,32 @@ export function WorkoutProgram() {
 }
 
 export function ListExercise() {
+  const [data, setData] = useState(dataList);
+
+  useEffect(() => {});
   return (
     <div className="px-20 text-white">
-      <div className="flex flex-row justify-between py-5 border-b-4 border-slate-600 opacity-50">
-        <div className=" my-auto">
-          <span>01</span>
-        </div>
-        <div>
-          <p className="text-3xl font-bold">Workout at Home</p>
-          <p className="text-sm">15 videos</p>
-        </div>
-        <div className=" my-auto">
-          <span>
-            <VscArrowRight className=" w-6 h-5" />
-          </span>
-        </div>
-      </div>
-      <div className="flex flex-row justify-between py-5 border-b-4 border-slate-600 opacity-50">
-        <div className=" my-auto">
-          <span>02</span>
-        </div>
-        <div>
-          <p className="text-3xl font-bold">Workout at Home</p>
-          <p className="text-sm">15 videos</p>
-        </div>
-        <div className=" my-auto">
-          <span>
-            <VscArrowRight className=" w-6 h-5" />
-          </span>
-        </div>
-      </div>
+      {data.list.map((items) => {
+        return (
+          <div
+            className="flex flex-row justify-between py-5 border-b-4 border-slate-600 opacity-50 cursor-pointer"
+            key={items.id}
+          >
+            <div className=" my-auto">
+              <span>0{items.id}</span>
+            </div>
+            <div className=" w-72">
+              <p className="text-3xl font-bold">{items.title}</p>
+              <p className="text-sm">{items.jml} videos</p>
+            </div>
+            <div className=" my-auto">
+              <span>
+                <VscArrowRight className=" w-6 h-5" />
+              </span>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

@@ -1,0 +1,28 @@
+{
+    "list": [{
+            "id": 1,
+            "title": "Workout at Home",
+            "jml": 15
+        },
+        {
+            "id": 2,
+            "title": "Stay Strong and Fit",
+            "jml": 48
+        },
+        {
+            "id": 3,
+            "title": "High Intensity",
+            "jml": 25
+        },
+        {
+            "id": 4,
+            "title": "Simple Workout",
+            "jml": 35
+        },
+        {
+            "id": 5,
+            "title": "Burn Calories",
+            "jml": 35
+        }
+    ]
+}
