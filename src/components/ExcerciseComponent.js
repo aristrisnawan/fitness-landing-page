@@ -79,7 +79,10 @@ export function PopularExcercise() {
       <div className=" mt-10 pb-6 grid grid-cols-4 justify-items-center LaptopL:grid-cols-4 Laptop:grid-cols-3">
         {data.popular.map((items) => {
           return (
-            <div className="mb-5" key={items.id}>
+            <div
+              className="mb-5 transition ease-in duration-500 hover:cursor-pointer hover:-translate-y-3"
+              key={items.id}
+            >
               <div className=" w-60 h-40 rounded relative mb-10">
                 <div className="">
                   <img className="rounded" src={items.url} alt="" />
